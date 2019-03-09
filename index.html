@@ -7,10 +7,98 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>tamarin</title>
   <link rel="stylesheet" href="out/materialize.min.css">
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      transition: all 1s !important;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      background-color: #032034eb;
+    }
+
+    body * {
+      color: white !important;
+      border-color: #ffffff6b !important;
+      font-family: cursive;
+    }
+
+    .root {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
 </head>
 
 <body>
-  silence is golden!
+  <div class="root">
+    <div class="inputs">
+      <div class="input-field col s6">
+        <input name="number1" required id="num1" type="text" class="validate" onkeyup="callForNum1(this.value)" />
+        <label for="num1">* num1</label>
+      </div>
+      <div class="input-field col s6">
+        <input name="number2" id="num2" type="text" class="validate" onkeyup="callForNum2(this.value)" />
+        <label for="num2">num2</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" id="id1" class="validate" onkeyup="callReverse(this.value)">
+        <label for="id1">type to see reverse</label>
+      </div>
+    </div>
+    <div class="values">
+      <table>
+        <thead>
+          <tr>
+            <th>Fibonacci</th>
+            <th>factorial</th>
+            <th>multiply</th>
+            <th>division</th>
+            <th>GCD</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td id="Fibonacci">0</td>
+            <td id="factorial">0</td>
+            <td id="multiply">0</td>
+            <td id="division">0</td>
+            <td id="gcd">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th>reverse</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td id="label">waiting for input..</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <script src="out/main.js"></script>
+  <script src="out/materialize.min.js"></script>
 </body>
 
 </html>
