@@ -1,5 +1,7 @@
 homework repo about data structures
 
+demo : [a link](https://amirhh.github.io/data_structure/)
+
 ### Dependencies
 
 - typescript
